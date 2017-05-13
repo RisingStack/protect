@@ -7,7 +7,7 @@ SQL injection attacks or XSS attacks.
 
 Once the module recognizes an attack pattern, it won't let the request go through.
 
-### Usage
+### Basic usage
 
 ```bash
 npm i @risingstack/protect --save
@@ -25,19 +25,18 @@ app.use(protect.express.sqlInjection())
 app.use(protect.express.xss())
 ```
 
-#### Just the ruleset
+### API
 
-```javascript
-const protect = require('@risingstack/protect')
-const express = require('express')
+#### `protect.express.sqlInjection([options])`
 
-const app = express()
+Returns an Express middleware, which checks for SQL injections.
 
-app.get('/', (req, res) => {
-  if (protect.rules.isSqlInjection(req.originalUrl)) {
-    // do something with the problematic request
-  }
+* `options.body`: if this options is set, the middleware will check for request bodies - options passed here are passed to the `raw-body` module
+* `options.loggerFunction`: you can provide a logger function for the middleware to log attacks
 
-  // continue with the routehandler
-})
-```
+#### `protect.express.xss([options])`
+
+Returns an Express middleware, which checks for XSS attacks.
+
+* `options.body`: if this options is set, the middleware will check for request bodies - options passed here are passed to the `raw-body` module
+* `options.loggerFunction`: you can provide a logger function for the middleware to log attacks
