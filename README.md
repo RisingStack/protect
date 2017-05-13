@@ -21,6 +21,6 @@ const express = require('express')
 
 const app = express()
 
-express.use(protect.express.sqlInjection())
-express.use(protect.express.xss())
+app.use(protect.express.sqlInjection())
+app.use(protect.express.xss())
 ```
