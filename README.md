@@ -24,3 +24,20 @@ const app = express()
 app.use(protect.express.sqlInjection())
 app.use(protect.express.xss())
 ```
+
+#### Just the ruleset
+
+```javascript
+const protect = require('@risingstack/protect')
+const express = require('express')
+
+const app = express()
+
+app.get('/', (req, res) => {
+  if (protect.rules.isSqlInjection(req.originalUrl)) {
+    // do something with the problematic request
+  }
+
+  // continue with the routehandler
+})
+```
