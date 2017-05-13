@@ -27,5 +27,8 @@
     "sinon": "2.2.0",
     "sinon-chai": "2.10.0",
     "supertest": "3.0.0"
+  },
+  "dependencies": {
+    "raw-body": "2.2.0"
   }
 }
