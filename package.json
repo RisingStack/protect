@@ -3,17 +3,29 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "author": "Gergely Nemeth <gergely.nemeth@risingstack.com>",
   "scripts": {
     "test-only": "NODE_ENV=test mocha --require co-mocha test/setup.js 'lib/**/*.spec.js'",
     "lint": "eslint lib",
     "test": "npm run lint && npm run test-only"
   },
+  "contributors": [
+    "Andras Toth <andras.toth@risingstack.com>"
+  ],
+  "repository": "risingstack/protect",
+  "keywords": [
+    "security",
+    "express",
+    "sql injection",
+    "xss"
+  ],
   "pre-commit": [
     "test"
   ],
-  "keywords": [],
-  "author": "",
   "license": "MIT",
+  "engines" : {
+    "node" : ">=6.0.0"
+  },
   "devDependencies": {
     "body-parser": "1.17.1",
     "chai": "3.5.0",
