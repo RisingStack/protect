@@ -31,12 +31,18 @@ app.use(protect.express.xss())
 
 Returns an Express middleware, which checks for SQL injections.
 
-* `options.body`: if this options is set, the middleware will check for request bodies - options passed here are passed to the `raw-body` module
+* `options.body`: if this options is set (`true`), the middleware will check for request bodies as well
+  * default: `false`
+  * prerequisite: you must have the [body-parser](https://github.com/expressjs/body-parser) module used before adding the protect middleware
 * `options.loggerFunction`: you can provide a logger function for the middleware to log attacks
+  * default: `noop`
 
 #### `protect.express.xss([options])`
 
 Returns an Express middleware, which checks for XSS attacks.
 
-* `options.body`: if this options is set, the middleware will check for request bodies - options passed here are passed to the `raw-body` module
+* `options.body`: if this options is set (`true`), the middleware will check for request bodies
+  * default: `false`
+  * prerequisite: you must have the [body-parser](https://github.com/expressjs/body-parser) module used before adding the protect middleware
 * `options.loggerFunction`: you can provide a logger function for the middleware to log attacks
+  * default: `noop`

@@ -15,6 +15,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "body-parser": "1.17.1",
     "chai": "3.5.0",
     "co-mocha": "1.2.0",
     "eslint": "3.19.0",
@@ -29,8 +30,5 @@
     "sinon-chai": "2.10.0",
     "supertest": "3.0.0",
     "traverse": "0.6.6"
-  },
-  "dependencies": {
-    "raw-body": "2.2.0"
   }
 }
