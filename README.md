@@ -7,6 +7,8 @@ SQL injection attacks or XSS attacks.
 
 Once the module recognizes an attack pattern, it won't let the request go through.
 
+This is not a substitute for parameterized queries in SQL - just an extra layer of security.
+
 ### Basic usage
 
 ```bash
