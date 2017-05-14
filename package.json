@@ -23,8 +23,8 @@
     "test"
   ],
   "license": "MIT",
-  "engines" : {
-    "node" : ">=6.0.0"
+  "engines": {
+    "node": ">=6.0.0"
   },
   "devDependencies": {
     "body-parser": "1.17.1",
@@ -42,5 +42,8 @@
     "sinon-chai": "2.10.0",
     "supertest": "3.0.0",
     "traverse": "0.6.6"
+  },
+  "dependencies": {
+    "debug": "2.6.6"
   }
 }
