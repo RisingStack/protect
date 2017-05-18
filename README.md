@@ -48,3 +48,10 @@ Returns an Express middleware, which checks for XSS attacks.
   * prerequisite: you must have the [body-parser](https://github.com/expressjs/body-parser) module used before adding the protect middleware
 * `options.loggerFunction`: you can provide a logger function for the middleware to log attacks
   * default: `noop`
+
+### Roadmap
+
+* block security scanners
+* schell / code injection protection
+* brute force protection
+* [what would you add?](https://github.com/RisingStack/protect/issues)
