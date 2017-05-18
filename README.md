@@ -1,5 +1,7 @@
 ## Protect by RisingStack
 
+[![Build Status](https://travis-ci.org/RisingStack/protect.svg?branch=master)](https://travis-ci.org/RisingStack/protect)
+
 The purpose of this module is to provide out-of-box, proactive protection for common security problems, like
 SQL injection attacks or XSS attacks.
 
