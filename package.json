@@ -39,13 +39,15 @@
     "fastbench": "1.0.1",
     "mocha": "3.3.0",
     "pre-commit": "1.2.2",
+    "redis": "2.7.1",
+    "semantic-release": "^6.3.6",
     "sinon": "2.2.0",
     "sinon-chai": "2.10.0",
     "supertest": "3.0.0",
-    "traverse": "0.6.6",
-    "semantic-release": "^6.3.6"
+    "traverse": "0.6.6"
   },
   "dependencies": {
-    "debug": "2.6.6"
+    "debug": "2.6.6",
+    "ratelimiter": "3.0.3"
   }
 }
