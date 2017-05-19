@@ -51,9 +51,24 @@ Returns an Express middleware, which checks for XSS attacks.
 * `options.loggerFunction`: you can provide a logger function for the middleware to log attacks
   * default: `noop`
 
+#### `protect.express.rateLimiter([options])`
+
+Returns an Express middleware, which ratelimits
+
+* `options.id`: function that returns the id used for ratelimiting - gets the `request` as its' first parameter
+  * required
+  * example: `(request) => request.connection.remoteAddress`
+* `options.db`: redis connection instance
+  * required
+* `options.max`: max requests within `options.duration`
+  * default: 2500
+* `options.max`: of limit in milliseconds
+  * default: 3600000
+* `options.loggerFunction`: you can provide a logger function for the middleware to log attacks
+  * default: `noop`
+
 ### Roadmap
 
 * block security scanners
 * schell / code injection protection
-* brute force protection
 * [what would you add?](https://github.com/RisingStack/protect/issues)
