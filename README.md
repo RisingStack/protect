@@ -5,13 +5,11 @@
 *Works on Node.js v6 and newer.*
 
 The purpose of this module is to provide out-of-box, proactive protection for common security problems, like
-SQL injection attacks or XSS attacks.
+SQL injection attacks, XSS attacks, brute force, etc...
+
+*This module is not a silver bullet, and is not a substitute for security-minded engineering work. But it can help you to achieve your goals.*
 
 ![protect by risingstack](https://blog-assets.risingstack.com/2017/05/lock.png)
-
-Once the module recognizes an attack pattern, it won't let the request go through.
-
-This is not a substitute for parameterized queries in SQL - just an extra layer of security.
 
 ### Basic usage
 
