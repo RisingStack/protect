@@ -24,11 +24,47 @@ npm i @risingstack/protect --save
 ```javascript
 const protect = require('@risingstack/protect')
 const express = require('express')
+const bodyParser = require('body-parser')
+const redis = require('redis')
+
+const client = redis.createClient()
 
 const app = express()
 
-app.use(protect.express.sqlInjection())
-app.use(protect.express.xss())
+app.use(bodyParser.json({
+  extended: false
+}))
+
+app.use(protect.express.sqlInjection({
+  body: true,
+  loggerFunction: console.error
+}))
+
+app.use(protect.express.xss({
+  body: true,
+  loggerFunction: console.error
+}))
+
+app.use(protect.express.rateLimiter({
+  db: client,
+  id: (request) => request.connection.remoteAddress
+}))
+
+app.get('/', (request, response) => {
+  response.send('hello protect!')
+})
+
+app.post('/login', protect.express.rateLimiter({
+  db: client,
+  id: (request) => request.body.email,
+  // max 10 tries per 2 minutes
+  max: 10,
+  duration: 120000
+}), (request, response) => {
+  response.send('wuut logged in')
+})
+
+app.listen(3000)
 ```
 
 ### API
