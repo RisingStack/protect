@@ -108,3 +108,38 @@ Returns an Express middleware, which ratelimits
 * block security scanners
 * schell / code injection protection
 * [what would you add?](https://github.com/RisingStack/protect/issues)
+
+### Security Recommendations
+
+As mentioned, this module isn't a silver bullet to solve your security issues completely.  The following information is provided to hopefully point you in the right direction for solving other security concerns or alternatives that may be useful based on your budget or scale.
+
+#### Other Aspects
+
+There are plenty of other areas that you should be concerned about when it comes to security, that this module doesn't cover (yet or won't) for various reasons.  Here are a few that are worth researching:
+
+* [Password Hashing](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet)
+  * Bcrypt modules: [bcrypt](https://www.npmjs.com/package/bcrypt),[bcryptjs](https://www.npmjs.com/package/bcryptjs), [bcrypt-as-promised](https://www.npmjs.com/package/bcrypt-as-promised) 
+  * Scrypt modules: [scrypt](https://www.npmjs.com/package/scrypt), [scryptsy](https://www.npmjs.com/package/scryptsy), [scrypt-async](https://www.npmjs.com/package/scrypt-async)
+* [NoSQL Injection](https://www.owasp.org/index.php/Testing_for_NoSQL_injection)
+* [Session management](https://www.owasp.org/index.php/Session_Management_Cheat_Sheet)
+* [CSRF - Cross Site Request Forgery](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet)
+  * [CSURF Express Module](https://www.npmjs.com/package/csurf)
+* Signed Cookies: [cookie-parser Express Module](https://expressjs.com/en/resources/middleware/cookie-parser.html)
+
+#### Resources
+
+* [OWASP -Open Web Application Security Project](https://www.owasp.org/index.php/Main_Page)
+* [Express: Production Best Practices](https://expressjs.com/en/advanced/best-practice-security.html)
+* [RisingStack: Node.js Security Checklist](https://blog.risingstack.com/node-js-security-checklist/)
+
+#### Dedicated WAF
+
+If you have the resources available (budget or hosting environment), a dedicated WAF (Web Application Firewall) can offer a robust solution to various security issues, such as blocking potential attackers and flagging their activity.
+
+* [OWASP WAF information](https://www.owasp.org/index.php/Web_Application_Firewall)
+* Hosting providers:
+  * [AWS WAF](https://aws.amazon.com/waf/)
+  * [Microsoft Azure WAF](https://docs.microsoft.com/en-us/azure/application-gateway/application-gateway-web-application-firewall-overview)
+* [ModSecurity]() - Apache, nginX and other web servers.
+* [CloudFlare](https://www.cloudflare.com/) - External WAF features.
+
