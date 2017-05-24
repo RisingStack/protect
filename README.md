@@ -103,6 +103,11 @@ Returns an Express middleware, which ratelimits
 * `options.loggerFunction`: you can provide a logger function for the middleware to log attacks
   * default: `noop`
 
+#### `protect.express.headers([options])`
+
+The headers object is a reference to the main `helmet` object exported. 
+For docs on the options object, please refer to the [helmet documentation](https://github.com/helmetjs/helmet).
+
 ### Roadmap
 
 * block security scanners
