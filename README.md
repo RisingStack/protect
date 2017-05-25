@@ -1,6 +1,7 @@
 ## Protect by RisingStack
 
 [![Build Status](https://travis-ci.org/RisingStack/protect.svg?branch=master)](https://travis-ci.org/RisingStack/protect)
+[![Known Vulnerabilities](https://snyk.io/test/npm/protect/badge.svg)](https://snyk.io/test/npm/protect)
 
 *Works on Node.js v6 and newer.*
 
