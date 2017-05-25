@@ -37,6 +37,7 @@
     "eslint-plugin-promise": "3.5.0",
     "express": "4.15.2",
     "fastbench": "1.0.1",
+    "koa": "2.2.0",
     "mocha": "3.3.0",
     "pre-commit": "1.2.2",
     "redis": "2.7.1",
