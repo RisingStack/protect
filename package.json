@@ -49,6 +49,7 @@
   "dependencies": {
     "debug": "2.6.6",
     "helmet": "3.6.1",
+    "is-sql-injection": "~1.0.0",
     "ratelimiter": "3.0.3"
   }
 }
